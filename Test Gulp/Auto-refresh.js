@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var reload = browserSync.reload();
+var reload = browser-sync.reload();
 
 gulp.task('serve', function() {
 	browserSync.init({
