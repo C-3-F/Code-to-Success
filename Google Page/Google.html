@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Replication</title>
+	<link rel="stylesheet" href="Stylesheet.css">
+</head>
+
+<body>
+	<header>
+		<ul class="top_left">
+			<li><a href="https://www.google.com/intl/en/about/?fg=1&utm_source=google.com&utm_medium=referral&utm_campaign=hp-header" class="top_links">About</a></li>
+			<li><a href="store.google.com" class="top_links">Store</a></li>
+		</ul>
+		<ul class="top_right">
+			<li><a href="gmail.com"class="top_links">Gmail</a></li>
+			<li><a href="images.google.com" class="top_links">Images</a></li>
+			<li><a id="signInLink"><div id="signIn">Sign in</div></a></li>
+		</ul>
+
+		<script type="text/javascript">
+			function focusIt()
+			{
+			  var my_search_box = document.getElementById("searchBox");
+			  my_search_box.focus();
+			}
+			onload = focusIt;
+		 </script>
+	</header>
+
+	<div id="content">
+		<div id="logo">
+			<img src = "https://encrypted-tbn0.gstatic.com/ima	ges?q=tbn:ANd9GcRd4RZeAzzt3oXRYHe5yH7yf9BmEdLc-D3XXU7PAT3xpNmKofhD:https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png" alt="Google Logo" width="280"/>
+		</div>
+		<div id="search">
+			<input id="searchBox" type="text" name="searchBar"/>
+		</div>
+		<div id="searchButtons">
+			<a><div class="searchBut">Google Search</div></a>
+			<a><div class="searchBut">I'm Feeling Lucky</div></a>
+		</div>
+	</div>
+	<footer>
+			<ul class="bottom_left">
+				<li><a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2" class="bottom_links">Advertising</a></li>
+				<li><a href="https://www.google.com/services/#/utm_campaign=google_hpbfooter&utm_source=google.com&utm_medium=referral&subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2?modal_active=none" class="bottom_links">Business</a></li>
+			</ul>
+			<ul class="bottom_right">
+				<li><a href="https://policies.google.com/privacy?hl=en&gl=us" class="bottom_links">Privacy</a></li>
+				<li><a href="https://policies.google.com/terms?hl=en&gl=us" class="bottom_links">Terms</a></li>
+				<li><a href="https://www.google.com/preferences?hl=en" class="bottom_links">Settings</a></li>
+			</ul>
+	</footer>
+</body>
+</html>

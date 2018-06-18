@@ -1,0 +1,160 @@
+* {
+	margin: 0px;
+}
+
+
+header {
+	width: 100%;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+header ul li {
+	display: inline-block;
+	margin: 10px;
+}
+
+
+.top_left {
+	position: absolute;
+	text-align: left;
+	top: 0px;
+	left: 0px;
+}
+
+.top_right {
+	position: absolute;
+	text-align: right;
+	top: 0px;
+	right: 0px;
+}
+
+.top_links {
+	color: black;
+	cursor: pointer;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	opacity: .75;
+	
+}
+
+.top_links:visited {
+	color: black;
+	opacity: .75;
+}
+
+#signIn {
+	background-color: #4285f4;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	line-height: 28px;
+	padding: 0 12px;
+	color: white;
+	font-weight: bold;
+	opacity: 1;
+	border-radius: 3px;
+}
+
+#signInLink:hover {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+#content {
+  margin-top: 200px !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+	clear: both;
+	text-align: center;
+	width: 100%;
+}
+
+
+#search {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+
+#searchBox {
+  width: 550px;
+  height: 30px;
+  border: 1px solid #999999;
+  padding: 5px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 3px;
+}
+
+#searchButtons a {
+	display: inline-block;
+	padding: 5px;
+}
+
+#searchButtons a:hover {
+	text-decoration: none;
+	border: 1px solid #999999;
+}
+
+.searchBut {
+	padding: 10px;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0px, 20px, 0px, 0px;
+	color: #757575;
+	background-color: #f2f2f2;
+
+}
+
+.bottom_left {
+
+	float: left;
+}
+
+.bottom_right {
+
+	float: right;
+	margin-right: 30px;
+}
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	text-align: right;
+	margin-bottom: 0px;
+	border-top: 1px solid #d1d1d1; 
+	background-color: #f2f2f2;
+
+}
+
+footer ul li {
+	display: inline-block;
+	margin: 10px;
+	margin-top: 13px;
+}
+
+.bottom_links {
+	color: #666;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	
+}
