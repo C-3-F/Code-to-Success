@@ -1,2 +1,6 @@
 // ES6 code goes here
-console.log('hello world');
+import moment from 'moment';
+
+const rightNow = moment();
+
+console.log(rightNow);
