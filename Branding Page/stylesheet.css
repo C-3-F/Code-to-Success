@@ -1,0 +1,143 @@
+body {
+  font-family: "Lato", sans-serif;
+  background-color: white;
+}
+
+p,
+li {
+  font-family: "PT Serif", serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  width: 660px;
+}
+
+.style-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  grid-gap: 20px;
+}
+
+.style-details-logo img {
+  width: 100%;
+}
+
+.style-details-text {
+  text-align: right;
+}
+
+.style-details-text div {
+  color: #808080;
+  font-weight: normal;
+}
+
+.style-details-text h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.dos-and-donts-wrapper {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-gap: 30px;
+}
+
+.blue-text {
+  color: #0079ff;
+}
+
+.red-text {
+  color: #dc0004;
+}
+
+.dos-donts-heading {
+  font-weight: 900;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.dont-image-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dont-image-box img {
+  width: 50%;
+}
+
+.dos-and-donts-list li {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.dont-image-box div {
+  font-size: 14px;
+  color: #999999;
+}
+
+.alternate-options-wrappper {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.alternate-options-wrappper h3 {
+  color: #999999;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.alternate-options-wrappper li {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 19px;
+}
+
+.alternate-options-images {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-gap: 100px 40px;
+}
+
+.image-logos {
+  width: 60%;
+}
+
+.text-logos {
+  width: 90%;
+}
+
+.additional-branding {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.additional-branding a {
+  color: #4fb8e8;
+  font-size: 19px;
+}
+
+.additional-branding p {
+  margin-bottom: 42px;
+}
+
+@media (max-width: 48em) {
+  .style-details, .dos-and-donts-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+  .style-details-text {
+    text-align: center;
+  }
+}
