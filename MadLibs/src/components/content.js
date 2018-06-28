@@ -5,7 +5,7 @@ class Content extends Component {
     const { data } = this.props;
     return (
       <p>
-        Ladies and gentlemaen, this is <b>{data.color}</b> Barber, your
+        Ladies and gentlemaen, this is<b>{data.color}</b> Barber, your
         sportscaster, bringing you the last inning of the game between the
         Cleveland <b>{data.pluralNoun}</b> and the <b>{data.adjectiveOne}</b>{" "}
         Yankees. <b>{data.celebOne}</b> is pitching for the Yankees. Heres the

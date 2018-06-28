@@ -1,10 +1,11 @@
 import React from "react";
 
-const Input = (label, state, onChange, name) => {
+const Input = ({ label, state, name }, onChange, index) => {
   return (
-    <div className="input">
+    <div key={index} className="input">
+      <label className="input__number">{index + 1}</label>
       <input name={name} value={state} onChange={onChange} />
-      <label>{label}</label>
+      <label className="input__title">{label}</label>
     </div>
   );
 };
