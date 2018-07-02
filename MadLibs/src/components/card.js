@@ -91,6 +91,7 @@ class Card extends Component {
         name: "adjectiveFive"
       }
     ];
+
     return (
       <div className="card">
         <div className="card__inputs">
