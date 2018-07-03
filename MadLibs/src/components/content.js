@@ -1,27 +1,52 @@
 import React, { Component } from "react";
 
 class Content extends Component {
+  constructor() {
+    super();
+    this.count = 1;
+  }
+
+  componentDidUpdate() {
+    this.count = 1;
+  }
+
+  renderLabel(data) {
+    return [
+      <div className="card__content__label">{this.count++}</div>,
+      <b>{data}</b>
+    ];
+  }
+
   render() {
     const { data } = this.props;
     return (
-      <p>
-        Ladies and gentlemaen, this is<b>{data.color}</b> Barber, your
-        sportscaster, bringing you the last inning of the game between the
-        Cleveland <b>{data.pluralNoun}</b> and the <b>{data.adjectiveOne}</b>{" "}
-        Yankees. <b>{data.celebOne}</b> is pitching for the Yankees. Heres the
-        pitch! It's a low <b>{data.adjectiveTwo}</b> ball that just cuts the
-        inside of the <b>{data.nounOne}</b> for a strick. THat makes the count{" "}
-        <b>{data.numberOne}</b> strikes and <b>{data.numberTwo}</b> balls. Now
-        here's the next pitch. The batter swings and connects. It's a long, high{" "}
-        <b>{data.nounTwo}</b> out to <b>{data.adjectiveThree}</b> field. But{" "}
-        <b>{data.celebTwo}</b> is coming up fast and has it for a second out.
-        The next batter up is <b>{data.celebThree}</b>, the Cleveland{" "}
-        <b>{data.adjectiveFour}</b>--stop. Here's the pitch... and it's hit... a
-        short ground ball to third <b>{data.nounThree}</b>.{" "}
-        <b>{data.celebFour}</b> scoops it up and throws it to first base for an
-        out, and the game is over. The Yankees will now move into second place
-        in the <b>{data.adjectiveFive}</b> League!
-      </p>
+      <div className="card__content">
+        <p>
+          Ladies and gentlemaen, this is {this.renderLabel(data.color)} Barber,
+          your sportscaster, bringing you the last inning of the game between
+          the Cleveland {this.renderLabel(data.pluralNoun)} and the
+          {this.renderLabel(data.adjectiveOne)} Yankees.{" "}
+          {this.renderLabel(data.celebOne)} is pitching for the Yankees. Heres
+          the pitch! It's a low
+          {this.renderLabel(data.adjectiveTwo)} ball that just cuts the inside
+          of the
+          {this.renderLabel(data.nounOne)} for a strick. THat makes the count
+          {this.renderLabel(data.numberOne)} strikes and{" "}
+          {this.renderLabel(data.numberTwo)} balls. Now here's the next pitch.
+          The batter swings and connects. It's a long, high{" "}
+          {this.renderLabel(data.nounTwo)} out to{" "}
+          {this.renderLabel(data.adjectiveThree)} field. But{" "}
+          <b>{data.celebTwo}</b> is coming up fast and has it for a second out.
+          The next batter up is {this.renderLabel(data.celebThree)}, the
+          Cleveland
+          {this.renderLabel(data.adjectiveFour)}--stop. Here's the pitch... and
+          it's hit... a short ground ball to third{" "}
+          {this.renderLabel(data.nounThree)}.
+          {this.renderLabel(data.celebFour)} scoops it up and throws it to first
+          base for an out, and the game is over. The Yankees will now move into
+          second place in the {this.renderLabel(data.adjectiveFive)} League!
+        </p>
+      </div>
     );
   }
 }

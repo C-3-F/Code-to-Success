@@ -93,19 +93,22 @@ class Card extends Component {
     ];
 
     return (
-      <div className="card">
+      <form className="card" onSubmit={this.handleFormSubmnit}>
         <div className="card__inputs">
           {inputData.map((data, index) => {
             return Input(data, this.handleInput, index);
           })}
         </div>
-        <form onSubmit={this.handleFormSubmnit}>
-          <button type="submit">
-            {!this.state.contentVisible ? "Generate Mad Lib" : "Clear Form"}
-          </button>
-        </form>
+        <button
+          type="submit"
+          className={`card__${
+            !this.state.contentVisible ? "generate" : "clear"
+          }`}
+        >
+          {!this.state.contentVisible ? "Generate Mad Lib" : "Clear Form"}
+        </button>
         {this.state.contentVisible ? <Content data={this.state} /> : ""}
-      </div>
+      </form>
     );
   }
 }
