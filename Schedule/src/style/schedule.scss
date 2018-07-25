@@ -1,0 +1,4 @@
+.schedule {
+  display: grid;
+  grid-template-rows: 50px repeat(auto-fit, 1fr) [progress-s]76px[progress-e];
+}
