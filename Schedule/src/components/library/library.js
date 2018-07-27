@@ -4,23 +4,33 @@ import * as actions from '../../actions';
 import Course from './course';
 
 class Library extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchCourses();
+  }
+
+  renderCourses() {
+    const data = this.props.courses;
+
+    return data.map((course, index) => {
+      return <Course {...course} key={index}/>;
+    });
   }
 
   render() {
     return (
       <div className="library">
         <h1 className="library__title">Course Library</h1>
-        <Course />
-        <Course />
-        <Course />
+        {this.renderCourses()}
       </div>
     );
   }
 }
 
+function mapStateToProps(state) {
+  return { courses: state.courses };
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(Library);
