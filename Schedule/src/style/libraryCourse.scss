@@ -1,20 +1,81 @@
-.library-course {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    grid-template-rows: 50px 1fr;
-    background: cornflowerblue;
+@mixin solid-course {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.21);
+  background: white;
+}
 
-    &__title-check {
-        grid-row: 1/2;
-        display: flex;
+.library-course-selected {
+  @include solid-course();
+}
+
+.library-course {
+  // padding: 15px;
+  padding-left: 25px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 45px 58px;
+  grid-template-rows: 32px 1fr;
+  align-items: center;
+  z-index: 50;
+
+  &__title-check {
+    grid-column: 1;
+    grid-row: 1/2;
+    display: flex;
+  }
+  &__arrow {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  &__action {
+    justify-self: center;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  &__description {
+    padding-top: 24px;
+    grid-row: 2/3;
+    grid-column: 1/-1;
+  }
+
+  background: white;
+  &:hover {
+    @include solid-course();
+    .library-course__action {
+      opacity: 1;
     }
-    &__arrow {
-        grid-row: 1/2;
+  }
+
+  &__title {
+    color: $color-gray;
+    font-family: $font-lato;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__icon {
+    color: $color-blue;
+    padding-left: 16px;
+    font-size: 24px;
+  }
+
+  &__description {
+    margin-top: 19px;
+    border-top: 1px solid #f2f2f2;
+
+    label {
+      color: $color-blue;
+      font-family: $font-alegreya;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
     }
-    &__action {
-        grid-row: 1/2;
+    p {
+      color: $color-gray;
+      font-family: $font-lato;
+      font-size: 16px;
     }
-    &__description {
-        grid-row: 2/3;
-    }
+  }
 }
