@@ -1,36 +1,38 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import * as actions from '../../actions';
-import Course from './course';
+
+import LibraryCourse from './libraryCourse';
 
 class Library extends Component {
-  componentWillMount() {
-    this.props.fetchCourses();
-  }
 
-  renderCourses() {
-    const data = this.props.courses;
+    componentWillMount() {
+        this.props.fetchCourses()
+    }
 
-    return data.map((course, index) => {
-      return <Course {...course} key={index}/>;
-    });
-  }
+    renderCourses() {
+        const data = this.props.courses
 
-  render() {
-    return (
-      <div className="library">
-        <h1 className="library__title">Course Library</h1>
-        {this.renderCourses()}
-      </div>
-    );
-  }
+        return data.map((course, index) => {
+            return <LibraryCourse {...course} key={index}/>
+        })
+    }
+
+    render() {
+        return (
+            <div className="library">
+                <h1 className="library__title">Course Library</h1>
+                { this.renderCourses() }
+            </div>
+        )
+    }
 }
 
 function mapStateToProps(state) {
-  return { courses: state.courses };
+    return {
+        courses: state.courses
+    }
 }
 
-export default connect(
-  mapStateToProps,
-  actions
-)(Library);
+export default connect(mapStateToProps, actions)(Library);

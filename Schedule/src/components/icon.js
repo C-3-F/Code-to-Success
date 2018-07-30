@@ -1,5 +1,9 @@
-import React from "react";
+import React from 'react';
 
-export default (icon, className) => {
-  return <i className={`${icon} ${className}`} />;
-};
+const Icon = (icon, className) => {
+    return (
+        <i className={`${icon} ${className}`}></i>
+    )
+}
+
+export default Icon

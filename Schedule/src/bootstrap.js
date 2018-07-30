@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 
-import App from './components/app';
+import Home from './components/home';
 import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(
-  compose(window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)
-);
+const createStoreWithMiddleware = applyMiddleware()(compose(window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore));
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
@@ -16,10 +14,9 @@ import './style/main.scss';
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-      <App />
-    </Provider>,
-    document.querySelector('.app-wrapper')
-  );
+      <Home />
+    </Provider>
+    , document.querySelector('.app-wrapper'));
 }
 
 document.addEventListener('DOMContentLoaded', main);
