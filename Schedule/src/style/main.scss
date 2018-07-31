@@ -1,4 +1,6 @@
+
 @import 'variables';
+@import 'gradient';
 @import 'library';
 @import 'libraryCourse';
 @import 'arrow';
@@ -6,13 +8,15 @@
 @import 'scheduleCourse';
 @import 'progressTracker';
 @import 'addRemoveAction';
-@import 'gradient.scss';
+
 
 .home {
-  height: 100vh;
-  width: 100vw;
+    height: 100vh;
+    width: 100vw;
 
-  display: grid;
-  grid-template-columns: [library-s] 1fr 1fr [schedule-s] 50px [library-e] 1fr [schedule-e];
-  grid-template-rows: 1fr;
+    display: grid;
+    grid-template-columns: [library-s] 1fr 1fr [schedule-s] 50px [library-e] 1fr [schedule-e];
+    grid-template-rows: 1fr;
 }
+
+

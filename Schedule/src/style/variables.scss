@@ -1,7 +1,17 @@
-$color-purple: #6f48ce;
-$color-light-blue: #32cbe8;
-$color-blue: #487bce;
-$color-gray: #4d4d4d;
+$color-purple: #6F48CE;
+$color-light-blue: #32CBE8;
+$color-blue: #487BCE;
+$color-gray: #4D4D4D;
+$color-subtle-gray: rgba(255, 255, 255, 0.52);
+$color-subtle-black: #333;
+
 $font-alegreya: 'Alegreya';
-$font-montserrat: 'Montserrat';
+$font-mont: 'Montserrat';
 $font-lato: 'Lato';
+
+@mixin border-left {
+    border-left: 2px solid $color-subtle-gray;
+    padding-left: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
